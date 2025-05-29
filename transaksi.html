@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Transaksi</title>
+</head>
+<body>
+  <header>
+    <h1>Transaksi Café Cerita Saja</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a> |
+    <a href="produk.html">Menu Café</a> |
+    <a href="transaksi.html">Transaksi</a> |
+    <a href="tentang.html">Tentang Kami</a>
+  </nav>
+
+  <h2>Formulir Transaksi</h2>
+  <p>Silakan isi formulir di bawah ini untuk melakukan transaksi atau pemesanan di Café Cerita Saja. Kami akan menghubungi Anda untuk konfirmasi lebih lanjut.</p>
+  <form id="form-transaksi" action="cetak.html" method="get" target="_blank">
+    <table cellpadding="4">
+      <tr>
+        <td><label>Nama Lengkap:</label></td>
+        <td><input type="text" name="nama" placeholder="Masukkan nama Anda"></td>
+      </tr>
+      <tr>
+        <td valign="top"><label>Pilih Produk & Jumlah:</label></td>
+        <td>
+          <input type="checkbox" name="produk[]" value="Kopi Hitam">
+          Kopi Hitam
+          <input type="number" name="jumlah_kopi" min="1" placeholder="Jumlah" style="width:60px;"><br>
+          <input type="checkbox" name="produk[]" value="Café Latte">
+          Café Latte
+          <input type="number" name="jumlah_latte" min="1" placeholder="Jumlah" style="width:60px;"><br>
+          <input type="checkbox" name="produk[]" value="Roti Bakar">
+          Roti Bakar
+          <input type="number" name="jumlah_roti" min="1" placeholder="Jumlah" style="width:60px;">
+        </td>
+      </tr>
+      <tr>
+        <td><label>Metode Pembayaran:</label></td>
+        <td>
+          <input type="radio" name="pembayaran" value="Tunai" id="cash" required><label for="cash">Tunai</label>
+          <input type="radio" name="pembayaran" value="Transfer" id="transfer" required><label for="transfer">Transfer</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Tanggal Transaksi:</label></td>
+        <td>
+          <input type="text" name="tanggal" id="input-tanggal" placeholder="dd/mm/yyyy" readonly>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Waktu Transaksi:</label></td>
+        <td>
+          <input type="text" name="waktu" id="input-waktu" placeholder="hh:mm:ss" readonly>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Nomor Meja:</label></td>
+        <td>
+          <select name="meja">
+            <option value="">Pilih Meja</option>
+            <option value="1">Meja 1</option>
+            <option value="2">Meja 2</option>
+            <option value="3">Meja 3</option>
+            <option value="4">Meja 4</option>
+            <option value="5">Meja 5</option>
+            <option value="6">Meja 6</option>
+            <option value="7">Meja 7</option>
+            <option value="8">Meja 8</option>
+            <option value="9">Meja 9</option>
+            <option value="10">Meja 10</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Jumlah Orang:</label></td>
+        <td><input type="number" name="jumlah_orang" min="1" placeholder="Jumlah orang" style="width:60px;"></td>
+      </tr>
+      <tr>
+        <td valign="top"><label>Catatan Tambahan:</label></td>
+        <td><textarea name="catatan" rows="3" cols="30" placeholder="Contoh: tanpa gula, alergi, dll"></textarea></td>
+      </tr>
+      <tr>
+        <td><label>Total yang harus dibayar:</label></td>
+        <td>
+          <input type="text" name="total" id="input-total" placeholder="Total bayar" readonly>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button type="submit">Cetak</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    // Fungsi untuk mengisi otomatis tanggal, waktu, dan total setiap kali ada perubahan
+    function pad(n) { return n < 10 ? '0' + n : n; }
+    function setTanggalWaktu() {
+      var now = new Date();
+      var tahun = now.getFullYear();
+      var bulan = pad(now.getMonth() + 1);
+      var tanggal = pad(now.getDate());
+      var jam = pad(now.getHours());
+      var menit = pad(now.getMinutes());
+      var detik = pad(now.getSeconds());
+      var tanggalTampil = tanggal + '/' + bulan + '/' + tahun;
+      var waktuStr = jam + ':' + menit + ':' + detik;
+      document.getElementById('input-tanggal').value = tanggalTampil;
+      document.getElementById('input-waktu').value = waktuStr;
+    }
+    function hitungTotal() {
+      var hargaKopi = 15000;
+      var hargaLatte = 20000;
+      var hargaRoti = 10000;
+      var total = 0;
+      var kopiChecked = document.querySelector('input[name="produk[]"][value="Kopi Hitam"]').checked;
+      var latteChecked = document.querySelector('input[name="produk[]"][value="Café Latte"]').checked;
+      var rotiChecked = document.querySelector('input[name="produk[]"][value="Roti Bakar"]').checked;
+      var jumlahKopi = parseInt(document.getElementsByName('jumlah_kopi')[0].value) || 0;
+      var jumlahLatte = parseInt(document.getElementsByName('jumlah_latte')[0].value) || 0;
+      var jumlahRoti = parseInt(document.getElementsByName('jumlah_roti')[0].value) || 0;
+      if (kopiChecked) total += hargaKopi * jumlahKopi;
+      if (latteChecked) total += hargaLatte * jumlahLatte;
+      if (rotiChecked) total += hargaRoti * jumlahRoti;
+      document.getElementById('input-total').value = total.toLocaleString('id-ID');
+    }
+    // Set tanggal, waktu, dan total saat halaman dimuat
+    setTanggalWaktu();
+    hitungTotal();
+    // Update tanggal & waktu setiap detik
+    setInterval(setTanggalWaktu, 1000);
+    // Event listener untuk update total
+    var produkInputs = document.querySelectorAll('input[name="produk[]"], input[name="jumlah_kopi"], input[name="jumlah_latte"], input[name="jumlah_roti"]');
+    produkInputs.forEach(function(input) {
+      input.addEventListener('change', hitungTotal);
+      input.addEventListener('input', hitungTotal);
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Café Cerita Saja</p>
+  </footer>
+</body>
+</html>

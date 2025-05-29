@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Struk Transaksi Café Cerita Saja</title>
+</head>
+<body>
+  <center>
+    <h2>Struk Transaksi Café Cerita Saja</h2>
+    <table cellpadding="4">
+      <tr>
+        <td>Nama</td>
+        <td>:</td>
+        <td>
+          <script>
+            document.write(decodeURIComponent((location.search.match(/[\?&]nama=([^&]*)/)||[])[1]||''));
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>Produk</td>
+        <td>:</td>
+        <td>
+          <script>
+            var params = new URLSearchParams(window.location.search);
+            var produk = params.getAll('produk[]');
+            var hasil = [];
+            if(produk.length) {
+              if(params.get('jumlah_kopi')) hasil.push('Kopi Hitam (' + params.get('jumlah_kopi') + ')');
+              if(params.get('jumlah_latte')) hasil.push('Café Latte (' + params.get('jumlah_latte') + ')');
+              if(params.get('jumlah_roti')) hasil.push('Roti Bakar (' + params.get('jumlah_roti') + ')');
+              document.write(hasil.join(', '));
+            }
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>Metode Pembayaran</td>
+        <td>:</td>
+        <td>
+          <script>
+            document.write(decodeURIComponent((location.search.match(/[\?&]pembayaran=([^&]*)/)||[])[1]||''));
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>Tanggal</td>
+        <td>:</td>
+        <td>
+          <script>
+            document.write(decodeURIComponent((location.search.match(/[\?&]tanggal=([^&]*)/)||[])[1]||''));
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>Waktu</td>
+        <td>:</td>
+        <td>
+          <script>
+            document.write(decodeURIComponent((location.search.match(/[\?&]waktu=([^&]*)/)||[])[1]||''));
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>Nomor Meja</td>
+        <td>:</td>
+        <td>
+          <script>
+            document.write(decodeURIComponent((location.search.match(/[\?&]meja=([^&]*)/)||[])[1]||''));
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>Jumlah Orang</td>
+        <td>:</td>
+        <td>
+          <script>
+            document.write(decodeURIComponent((location.search.match(/[\?&]jumlah_orang=([^&]*)/)||[])[1]||''));
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>Catatan</td>
+        <td>:</td>
+        <td>
+          <script>
+            var catatan = decodeURIComponent((location.search.match(/[\?&]catatan=([^&]*)/)||[])[1]||'');
+            // Hilangkan + dan ganti dengan spasi agar "tanpa+gula" jadi "tanpa gula"
+            document.write(catatan.replace(/\+/g, ' '));
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Total</b></td>
+        <td>:</td>
+        <td>
+          <b>Rp 
+            <script>
+              document.write(decodeURIComponent((location.search.match(/[\?&]total=([^&]*)/)||[])[1]||''));
+            </script>
+          </b>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <small>Terima kasih telah bertransaksi di Café Cerita Saja.</small>
+    <br><br>
+    <a href="index.html"><button>Kembali ke Beranda</button></a>
+  </center>
+</body>
+</html>
