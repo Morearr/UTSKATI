@@ -13,7 +13,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #f5f3f0 0%, #e8e2db 100%);
+    background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 100%);
     min-height: 100vh;
 }
 
@@ -42,7 +42,7 @@ body {
    ================================= */
 
 .header {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%);
+    background: linear-gradient(135deg, #9AA6B2 0%, #BCCCDC 50%, #D9EAFD 100%);
     color: white;
     padding: 30px 20px;
     text-align: center;
@@ -86,14 +86,14 @@ body {
    ================================= */
 
 .navigation {
-    background: #654321;
+    background: #BCCCDC;
     padding: 15px 0;
     text-align: center;
-    border-bottom: 3px solid #8B4513;
+    border-bottom: 3px solid #9AA6B2;
 }
 
 .navigation a {
-    color: #FFE4B5;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
@@ -106,7 +106,7 @@ body {
 
 .navigation a:hover,
 .navigation a.active {
-    background: #8B4513;
+    background: #9AA6B2;
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -125,14 +125,14 @@ body {
 .sidebar-left,
 .sidebar-right {
     width: 20%;
-    background: linear-gradient(180deg, #F5F5DC 0%, #F0E68C 100%);
+    background: linear-gradient(180deg, #F8FAFC 0%, #D9EAFD 100%);
     padding: 20px 15px;
-    border-right: 2px solid #DDD;
+    border-right: 2px solid #BCCCDC;
 }
 
 .sidebar-right {
     border-right: none;
-    border-left: 2px solid #DDD;
+    border-left: 2px solid #BCCCDC;
 }
 
 .content-center {
@@ -155,11 +155,11 @@ body {
 }
 
 .sidebar-section h3 {
-    color: #8B4513;
+    color: #9AA6B2;
     font-size: 1.2em;
     margin-bottom: 15px;
     padding-bottom: 8px;
-    border-bottom: 2px solid #F0E68C;
+    border-bottom: 2px solid #D9EAFD;
     text-align: center;
 }
 
@@ -167,9 +167,9 @@ body {
     text-align: center;
     margin-bottom: 15px;
     padding: 10px;
-    background: #FFFAF0;
+    background: #F8FAFC;
     border-radius: 8px;
-    border: 1px solid #F0E68C;
+    border: 1px solid #D9EAFD;
 }
 
 .promo-item img {
@@ -198,16 +198,16 @@ body {
 }
 
 .sidebar-list li {
-    background: #FFFAF0;
+    background: #F8FAFC;
     margin: 8px 0;
     padding: 10px;
     border-radius: 5px;
-    border-left: 4px solid #8B4513;
+    border-left: 4px solid #9AA6B2;
     font-size: 0.9em;
 }
 
 .sidebar-list li b {
-    color: #8B4513;
+    color: #9AA6B2;
 }
 
 /* =================================
@@ -220,7 +220,7 @@ body {
 }
 
 .welcome-section h2 {
-    color: #8B4513;
+    color: #9AA6B2;
     font-size: 2.2em;
     margin-bottom: 15px;
 }
@@ -251,27 +251,27 @@ body {
 
 .main-image a {
     text-decoration: none;
-    color: #8B4513;
+    color: #9AA6B2;
     font-weight: bold;
     font-size: 1.2em;
 }
 
 .reservation-section {
-    background: linear-gradient(135deg, #F0E68C 0%, #FFE4B5 100%);
+    background: linear-gradient(135deg, #D9EAFD 0%, #F8FAFC 100%);
     padding: 20px;
     border-radius: 15px;
     text-align: center;
     margin-top: 20px;
-    border: 2px solid #DDD;
+    border: 2px solid #BCCCDC;
 }
 
 .reservation-section h3 {
-    color: #8B4513;
+    color: #9AA6B2;
     margin-bottom: 10px;
 }
 
 .reservation-section a {
-    color: #8B4513;
+    color: #9AA6B2;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -284,7 +284,7 @@ body {
 }
 
 .reservation-section a:hover {
-    background: #8B4513;
+    background: #9AA6B2;
     color: white;
     transform: translateY(-2px);
 }
@@ -294,12 +294,12 @@ body {
    ================================= */
 
 .footer {
-    background: #654321;
-    color: #FFE4B5;
+    background: #9AA6B2;
+    color: #F8FAFC;
     text-align: center;
     padding: 20px;
     font-size: 1em;
-    border-top: 3px solid #8B4513;
+    border-top: 3px solid #BCCCDC;
 }
 
 /* =================================
@@ -349,7 +349,7 @@ body {
 
 .divider {
     height: 2px;
-    background: linear-gradient(90deg, transparent 0%, #DDD 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, #BCCCDC 50%, transparent 100%);
     margin: 20px 0;
     border: none;
 }

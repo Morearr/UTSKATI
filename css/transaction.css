@@ -12,7 +12,7 @@
 }
 
 .transaction-header {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    background: linear-gradient(135deg, #9AA6B2 0%, #BCCCDC 100%);
     color: white;
     padding: 30px;
     text-align: center;
@@ -25,13 +25,13 @@
 }
 
 .transaction-nav {
-    background: #654321;
+    background: #BCCCDC;
     padding: 15px 0;
     text-align: center;
 }
 
 .transaction-nav a {
-    color: #FFE4B5;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -41,7 +41,7 @@
 }
 
 .transaction-nav a:hover {
-    background: #8B4513;
+    background: #9AA6B2;
     color: white;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .form-section h2 {
-    color: #8B4513;
+    color: #9AA6B2;
     font-size: 2em;
     margin-bottom: 10px;
     text-align: center;
@@ -64,10 +64,10 @@
 }
 
 .transaction-form {
-    background: #FFFAF0;
+    background: #F8FAFC;
     padding: 30px;
     border-radius: 15px;
-    border: 2px solid #F0E68C;
+    border: 2px solid #D9EAFD;
 }
 
 .form-table {
@@ -83,7 +83,7 @@
 .form-table td:first-child {
     width: 200px;
     font-weight: bold;
-    color: #8B4513;
+    color: #9AA6B2;
 }
 
 .form-input {
@@ -98,8 +98,8 @@
 
 .form-input:focus {
     outline: none;
-    border-color: #8B4513;
-    box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
+    border-color: #9AA6B2;
+    box-shadow: 0 0 5px rgba(154, 166, 178, 0.3);
 }
 
 .form-textarea {
@@ -117,8 +117,8 @@
 
 .form-textarea:focus {
     outline: none;
-    border-color: #8B4513;
-    box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
+    border-color: #9AA6B2;
+    box-shadow: 0 0 5px rgba(154, 166, 178, 0.3);
 }
 
 .form-select {
@@ -133,7 +133,7 @@
 
 .form-select:focus {
     outline: none;
-    border-color: #8B4513;
+    border-color: #9AA6B2;
 }
 
 /* Product Selection Styling */
@@ -141,7 +141,7 @@
     background: white;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #E0E0E0;
+    border: 1px solid #BCCCDC;
     margin: 10px 0;
 }
 
@@ -150,9 +150,9 @@
     align-items: center;
     margin: 10px 0;
     padding: 10px;
-    background: #FFFAF0;
+    background: #F8FAFC;
     border-radius: 8px;
-    border: 1px solid #F0E68C;
+    border: 1px solid #D9EAFD;
 }
 
 .product-item input[type="checkbox"] {
@@ -163,7 +163,7 @@
 .product-item label {
     flex: 1;
     font-weight: bold;
-    color: #8B4513;
+    color: #9AA6B2;
 }
 
 .quantity-input {
@@ -206,8 +206,8 @@
 }
 
 .payment-option:hover {
-    border-color: #8B4513;
-    background: #FFFAF0;
+    border-color: #9AA6B2;
+    background: #F8FAFC;
 }
 
 .payment-option input[type="radio"] {
@@ -216,13 +216,13 @@
 }
 
 .payment-option input[type="radio"]:checked + label {
-    color: #8B4513;
+    color: #9AA6B2;
     font-weight: bold;
 }
 
 /* Total Display */
 .total-display {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    background: linear-gradient(135deg, #9AA6B2 0%, #BCCCDC 100%);
     color: white;
     padding: 15px 20px;
     border-radius: 10px;
@@ -234,7 +234,7 @@
 
 /* Submit Button */
 .submit-button {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    background: linear-gradient(135deg, #9AA6B2 0%, #BCCCDC 100%);
     color: white;
     padding: 15px 40px;
     border: none;
@@ -249,14 +249,14 @@
 }
 
 .submit-button:hover {
-    background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+    background: linear-gradient(135deg, #BCCCDC 0%, #9AA6B2 100%);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .transaction-footer {
-    background: #654321;
-    color: #FFE4B5;
+    background: #9AA6B2;
+    color: #F8FAFC;
     text-align: center;
     padding: 20px;
 }

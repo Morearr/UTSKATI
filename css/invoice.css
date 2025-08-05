@@ -13,7 +13,7 @@
 }
 
 .invoice-header {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    background: linear-gradient(135deg, #9AA6B2 0%, #BCCCDC 100%);
     color: white;
     padding: 30px;
     text-align: center;
@@ -45,14 +45,14 @@
 }
 
 .cafe-info {
-    background: #FFFAF0;
+    background: #F8FAFC;
     padding: 20px;
     text-align: center;
-    border-bottom: 3px dashed #8B4513;
+    border-bottom: 3px dashed #9AA6B2;
 }
 
 .cafe-info h3 {
-    color: #8B4513;
+    color: #9AA6B2;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
@@ -71,14 +71,14 @@
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    background: #FFFAF0;
+    background: #F8FAFC;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .invoice-table tr:nth-child(even) {
-    background: rgba(240, 230, 140, 0.2);
+    background: rgba(217, 234, 253, 0.2);
 }
 
 .invoice-table td {
@@ -89,14 +89,14 @@
 
 .invoice-table td:first-child {
     font-weight: bold;
-    color: #8B4513;
+    color: #9AA6B2;
     width: 150px;
 }
 
 .invoice-table td:nth-child(2) {
     width: 20px;
     text-align: center;
-    color: #8B4513;
+    color: #9AA6B2;
 }
 
 .invoice-table td:last-child {
@@ -105,7 +105,7 @@
 
 /* Styling khusus untuk data transaksi */
 .transaction-id {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    background: linear-gradient(135deg, #9AA6B2 0%, #BCCCDC 100%);
     color: white;
     padding: 10px 20px;
     border-radius: 20px;
@@ -118,7 +118,7 @@
     background: white;
     padding: 15px;
     border-radius: 8px;
-    border: 2px solid #F0E68C;
+    border: 2px solid #D9EAFD;
     margin: 10px 0;
 }
 
@@ -136,11 +136,11 @@
 
 .product-name {
     font-weight: bold;
-    color: #8B4513;
+    color: #9AA6B2;
 }
 
 .product-quantity {
-    background: #F0E68C;
+    background: #D9EAFD;
     padding: 2px 8px;
     border-radius: 10px;
     font-size: 0.9em;
@@ -149,16 +149,16 @@
 
 .product-price {
     font-weight: bold;
-    color: #A0522D;
+    color: #BCCCDC;
 }
 
 /* Total section */
 .total-section {
-    background: linear-gradient(135deg, #F0E68C 0%, #FFE4B5 100%);
+    background: linear-gradient(135deg, #D9EAFD 0%, #F8FAFC 100%);
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
-    border: 2px solid #8B4513;
+    border: 2px solid #9AA6B2;
 }
 
 .total-row {
@@ -172,8 +172,8 @@
 .total-final {
     font-size: 1.4em;
     font-weight: bold;
-    color: #8B4513;
-    border-top: 2px solid #8B4513;
+    color: #9AA6B2;
+    border-top: 2px solid #9AA6B2;
     padding-top: 10px;
     margin-top: 10px;
 }
@@ -191,8 +191,8 @@
 .payment-method {
     font-size: 1.2em;
     font-weight: bold;
-    color: #8B4513;
-    background: #FFFAF0;
+    color: #9AA6B2;
+    background: #F8FAFC;
     padding: 10px 20px;
     border-radius: 20px;
     display: inline-block;
@@ -200,8 +200,8 @@
 
 /* Footer invoice */
 .invoice-footer {
-    background: #654321;
-    color: #FFE4B5;
+    background: #9AA6B2;
+    color: #F8FAFC;
     padding: 20px;
     text-align: center;
 }

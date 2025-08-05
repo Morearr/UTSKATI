@@ -25,11 +25,11 @@
 }
 
 .product-card h3 {
-    color: #8B4513;
+    color: #9AA6B2;
     font-size: 1.5em;
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #F0E68C;
+    border-bottom: 2px solid #D9EAFD;
 }
 
 .product-image {
@@ -52,9 +52,9 @@
 .product-price {
     font-size: 1.3em;
     font-weight: bold;
-    color: #8B4513;
+    color: #9AA6B2;
     margin: 10px 0;
-    background: #FFFAF0;
+    background: #F8FAFC;
     padding: 8px 15px;
     border-radius: 20px;
     display: inline-block;
@@ -68,11 +68,11 @@
 }
 
 .product-description b {
-    color: #8B4513;
+    color: #9AA6B2;
 }
 
 .product-taste {
-    background: #F0E68C;
+    background: #D9EAFD;
     padding: 10px;
     border-radius: 8px;
     margin: 10px 0;
@@ -81,7 +81,7 @@
 }
 
 .buy-button {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    background: linear-gradient(135deg, #9AA6B2 0%, #BCCCDC 100%);
     color: white;
     padding: 12px 25px;
     border: none;
@@ -97,14 +97,14 @@
 }
 
 .buy-button:hover {
-    background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+    background: linear-gradient(135deg, #BCCCDC 0%, #9AA6B2 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 .product-divider {
     height: 3px;
-    background: linear-gradient(90deg, transparent 0%, #8B4513 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, #9AA6B2 50%, transparent 100%);
     margin: 30px 0;
     border: none;
 }
@@ -137,11 +137,11 @@
 }
 
 .legacy-product-section h3 {
-    color: #8B4513;
+    color: #9AA6B2;
     font-size: 1.8em;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 3px solid #F0E68C;
+    border-bottom: 3px solid #D9EAFD;
 }
 
 .legacy-product-section img {
@@ -161,11 +161,11 @@
 }
 
 .legacy-product-section p b {
-    color: #8B4513;
+    color: #9AA6B2;
 }
 
 .legacy-product-section a {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    background: linear-gradient(135deg, #9AA6B2 0%, #BCCCDC 100%);
     color: white;
     padding: 12px 30px;
     border-radius: 25px;
@@ -179,7 +179,7 @@
 }
 
 .legacy-product-section a:hover {
-    background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+    background: linear-gradient(135deg, #BCCCDC 0%, #9AA6B2 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }

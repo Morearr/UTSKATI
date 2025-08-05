@@ -12,7 +12,7 @@
 }
 
 .about-header {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    background: linear-gradient(135deg, #9AA6B2 0%, #BCCCDC 100%);
     color: white;
     padding: 40px;
     text-align: center;
@@ -26,13 +26,13 @@
 }
 
 .about-nav {
-    background: #654321;
+    background: #9AA6B2;
     padding: 15px 0;
     text-align: center;
 }
 
 .about-nav a {
-    color: #FFE4B5;
+    color: #F8FAFC;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -42,7 +42,7 @@
 }
 
 .about-nav a:hover {
-    background: #8B4513;
+    background: #BCCCDC;
     color: white;
 }
 
@@ -55,20 +55,20 @@
 }
 
 .about-section h2 {
-    color: #8B4513;
+    color: #9AA6B2;
     font-size: 2.2em;
     margin-bottom: 20px;
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 3px solid #F0E68C;
+    border-bottom: 3px solid #D9EAFD;
 }
 
 .about-section h3 {
-    color: #8B4513;
+    color: #9AA6B2;
     font-size: 1.6em;
     margin: 25px 0 15px 0;
     padding-left: 15px;
-    border-left: 4px solid #8B4513;
+    border-left: 4px solid #9AA6B2;
 }
 
 .about-section p {
@@ -80,17 +80,17 @@
 }
 
 .cafe-description {
-    background: linear-gradient(135deg, #FFFAF0 0%, #F5F5DC 100%);
+    background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 100%);
     padding: 25px;
     border-radius: 15px;
-    border: 2px solid #F0E68C;
+    border: 2px solid #BCCCDC;
     margin: 20px 0;
     text-align: center;
 }
 
 .cafe-description p {
     font-size: 1.2em;
-    color: #8B4513;
+    color: #9AA6B2;
     font-weight: 500;
     margin: 0;
 }
@@ -109,17 +109,17 @@
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    border: 2px solid #F0E68C;
+    border: 2px solid #D9EAFD;
 }
 
 .vision-card h4,
 .mission-card h4 {
-    color: #8B4513;
+    color: #9AA6B2;
     font-size: 1.4em;
     margin-bottom: 15px;
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 2px solid #F0E68C;
+    border-bottom: 2px solid #D9EAFD;
 }
 
 .mission-list {
@@ -128,22 +128,22 @@
 }
 
 .mission-list li {
-    background: #FFFAF0;
+    background: #F8FAFC;
     margin: 10px 0;
     padding: 12px 15px;
     border-radius: 8px;
-    border-left: 4px solid #8B4513;
+    border-left: 4px solid #9AA6B2;
     transition: transform 0.3s ease;
 }
 
 .mission-list li:hover {
     transform: translateX(5px);
-    background: #F0E68C;
+    background: #D9EAFD;
 }
 
 /* Contact Section */
 .contact-section {
-    background: linear-gradient(135deg, #F0E68C 0%, #FFE4B5 100%);
+    background: linear-gradient(135deg, #D9EAFD 0%, #F8FAFC 100%);
     padding: 30px;
     border-radius: 15px;
     margin: 30px 0;
@@ -176,14 +176,14 @@
 
 .contact-table td:first-child {
     font-weight: bold;
-    color: #8B4513;
+    color: #9AA6B2;
     width: 100px;
 }
 
 .contact-table td:nth-child(2) {
     width: 20px;
     text-align: center;
-    color: #8B4513;
+    color: #9AA6B2;
 }
 
 .contact-table td:last-child {
@@ -228,7 +228,7 @@
 }
 
 .social-link {
-    background: #8B4513;
+    background: #9AA6B2;
     color: white;
     padding: 10px 15px;
     border-radius: 25px;
@@ -241,7 +241,7 @@
 }
 
 .social-link:hover {
-    background: #A0522D;
+    background: #BCCCDC;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -260,7 +260,7 @@
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border: 2px solid #F0E68C;
+    border: 2px solid #D9EAFD;
     transition: transform 0.3s ease;
 }
 
@@ -271,7 +271,7 @@
 .stat-number {
     font-size: 2.5em;
     font-weight: bold;
-    color: #8B4513;
+    color: #9AA6B2;
     display: block;
 }
 
@@ -282,8 +282,8 @@
 }
 
 .about-footer {
-    background: #654321;
-    color: #FFE4B5;
+    background: #9AA6B2;
+    color: #F8FAFC;
     text-align: center;
     padding: 25px;
 }
