@@ -2,152 +2,147 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Form Transaksi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Transaksi - Café Cerita Saja</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/transaction.css">
 </head>
 <body>
-  <font face="Arial, Helvetica, sans-serif" size="4">
-  <header>
-    <h1>Transaksi Café Cerita Saja</h1>
-  </header>
+  <div class="transaction-container">
+    <!-- HEADER -->
+    <div class="transaction-header">
+      <h1>🏪 Transaksi Café Cerita Saja</h1>
+    </div>
 
-  <nav>
-    <a href="index.html">Beranda</a> |
-    <a href="produk.html">Menu Café</a> |
-    <a href="transaksi.html">Transaksi</a> |
-    <a href="tentang.html">Tentang Kami</a>
-  </nav>
+    <!-- NAVIGATION -->
+    <div class="transaction-nav">
+      <a href="index.html">🏠 Beranda</a>
+      <a href="produk.html">📋 Menu Café</a>
+      <a href="transaksi.html" class="active">💳 Transaksi</a>
+      <a href="tentang.html">ℹ️ Tentang Kami</a>
+    </div>
 
-  <h2>Formulir Transaksi</h2>
-  <p>Silakan isi formulir di bawah ini untuk melakukan transaksi atau pemesanan di Café Cerita Saja. Kami akan menghubungi Anda untuk konfirmasi lebih lanjut.</p>
-  <form id="form-transaksi" action="cetak.html" method="get" target="_blank">
-    <table cellpadding="4">
-      <tr>
-        <td><label>Nama Lengkap:</label></td>
-        <td><input type="text" name="nama" placeholder="Masukkan nama Anda"></td>
-      </tr>
-      <tr>
-        <td valign="top"><label>Pilih Produk & Jumlah:</label></td>
-        <td>
-          <input type="checkbox" name="produk[]" value="Kopi Hitam">
-          Kopi Hitam
-          <input type="number" name="jumlah_kopi" min="1" placeholder="Jumlah" style="width:60px;"><br>
-          <input type="checkbox" name="produk[]" value="Café Latte">
-          Café Latte
-          <input type="number" name="jumlah_latte" min="1" placeholder="Jumlah" style="width:60px;"><br>
-          <input type="checkbox" name="produk[]" value="Roti Bakar">
-          Roti Bakar
-          <input type="number" name="jumlah_roti" min="1" placeholder="Jumlah" style="width:60px;">
-        </td>
-      </tr>
-      <tr>
-        <td><label>Metode Pembayaran:</label></td>
-        <td>
-          <input type="radio" name="pembayaran" value="Tunai" id="cash" required><label for="cash">Tunai</label>
-          <input type="radio" name="pembayaran" value="Transfer" id="transfer" required><label for="transfer">Transfer</label>
-        </td>
-      </tr>
-      <tr>
-        <td><label>Tanggal Transaksi:</label></td>
-        <td>
-          <input type="text" name="tanggal" id="input-tanggal" placeholder="dd/mm/yyyy" readonly>
-        </td>
-      </tr>
-      <tr>
-        <td><label>Waktu Transaksi:</label></td>
-        <td>
-          <input type="text" name="waktu" id="input-waktu" placeholder="hh:mm:ss" readonly>
-        </td>
-      </tr>
-      <tr>
-        <td><label>Nomor Meja:</label></td>
-        <td>
-          <select name="meja">
-            <option value="">Pilih Meja</option>
-            <option value="1">Meja 1</option>
-            <option value="2">Meja 2</option>
-            <option value="3">Meja 3</option>
-            <option value="4">Meja 4</option>
-            <option value="5">Meja 5</option>
-            <option value="6">Meja 6</option>
-            <option value="7">Meja 7</option>
-            <option value="8">Meja 8</option>
-            <option value="9">Meja 9</option>
-            <option value="10">Meja 10</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td><label>Jumlah Orang:</label></td>
-        <td><input type="number" name="jumlah_orang" min="1" placeholder="Jumlah orang" style="width:60px;"></td>
-      </tr>
-      <tr>
-        <td valign="top"><label>Catatan Tambahan:</label></td>
-        <td><textarea name="catatan" rows="3" cols="30" placeholder="Contoh: tanpa gula, alergi, dll"></textarea></td>
-      </tr>
-      <tr>
-        <td><label>Total yang harus dibayar:</label></td>
-        <td>
-          <input type="text" name="total" id="input-total" placeholder="Total bayar" readonly>
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          <button type="submit">Cetak</button>
-        </td>
-      </tr>
-    </table>
-  </form>
+    <!-- FORM SECTION -->
+    <div class="form-section">
+      <h2>📝 Formulir Transaksi</h2>
+      <p>Silakan isi formulir di bawah ini untuk melakukan transaksi atau pemesanan di Café Cerita Saja. Kami akan memproses pesanan Anda dengan cepat dan akurat.</p>
+      
+      <form id="form-transaksi" class="transaction-form" action="cetak.html" method="get" target="_blank">
+        <table class="form-table">
+          <tr>
+            <td><label for="nama">👤 Nama Lengkap:</label></td>
+            <td>
+              <input type="text" name="nama" id="nama" class="form-input" placeholder="Masukkan nama lengkap Anda" required>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><label>🛍️ Pilih Produk & Jumlah:</label></td>
+            <td>
+              <div class="product-selection">
+                <div class="product-item">
+                  <input type="checkbox" name="produk[]" value="Kopi Hitam" id="kopi-hitam">
+                  <label for="kopi-hitam">☕ Kopi Hitam - Rp 15.000</label>
+                  <input type="number" name="jumlah_kopi" class="quantity-input" min="1" placeholder="Qty" disabled>
+                </div>
+                
+                <div class="product-item">
+                  <input type="checkbox" name="produk[]" value="Café Latte" id="cafe-latte">
+                  <label for="cafe-latte">🥛 Café Latte - Rp 20.000</label>
+                  <input type="number" name="jumlah_latte" class="quantity-input" min="1" placeholder="Qty" disabled>
+                </div>
+                
+                <div class="product-item">
+                  <input type="checkbox" name="produk[]" value="Roti Bakar" id="roti-bakar">
+                  <label for="roti-bakar">🍞 Roti Bakar - Rp 10.000</label>
+                  <input type="number" name="jumlah_roti" class="quantity-input" min="1" placeholder="Qty" disabled>
+                </div>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><label>💳 Metode Pembayaran:</label></td>
+            <td>
+              <div class="payment-options">
+                <div class="payment-option">
+                  <input type="radio" name="pembayaran" value="Tunai" id="cash" required>
+                  <label for="cash">💵 Tunai</label>
+                </div>
+                <div class="payment-option">
+                  <input type="radio" name="pembayaran" value="Transfer" id="transfer" required>
+                  <label for="transfer">🏦 Transfer Bank</label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><label>📅 Tanggal Transaksi:</label></td>
+            <td>
+              <input type="text" name="tanggal" id="input-tanggal" class="form-input" placeholder="dd/mm/yyyy" readonly>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><label>⏰ Waktu Transaksi:</label></td>
+            <td>
+              <input type="text" name="waktu" id="input-waktu" class="form-input" placeholder="hh:mm:ss" readonly>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><label>🪑 Nomor Meja:</label></td>
+            <td>
+              <select name="meja" class="form-select" required>
+                <option value="">Pilih Nomor Meja</option>
+                <option value="1">Meja 1 (Dekat Jendela)</option>
+                <option value="2">Meja 2 (Area Tengah)</option>
+                <option value="3">Meja 3 (Area Belakang)</option>
+                <option value="4">Meja 4 (VIP Corner)</option>
+                <option value="5">Meja 5 (Outdoor)</option>
+                <option value="6">Meja 6 (Smoking Area)</option>
+                <option value="7">Meja 7 (Non-Smoking)</option>
+                <option value="8">Meja 8 (Family Table)</option>
+                <option value="9">Meja 9 (Counter)</option>
+                <option value="10">Meja 10 (Private Room)</option>
+              </select>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><label>👥 Jumlah Orang:</label></td>
+            <td>
+              <input type="number" name="jumlah_orang" class="form-input" min="1" max="10" placeholder="Berapa orang?" required>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><label>📝 Catatan Tambahan:</label></td>
+            <td>
+              <textarea name="catatan" class="form-textarea" placeholder="Contoh: tanpa gula, alergi tertentu, permintaan khusus, dll"></textarea>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><label>💰 Total Pembayaran:</label></td>
+            <td>
+              <input type="text" name="total" id="input-total" class="form-input total-display" placeholder="Total akan dihitung otomatis" readonly>
+            </td>
+          </tr>
+        </table>
+        
+        <button type="submit" class="submit-button">🖨️ Checkout & Cetak Struk</button>
+      </form>
+    </div>
 
-  <script>
-    // Fungsi untuk mengisi otomatis tanggal, waktu, dan total setiap kali ada perubahan
-    function pad(n) { return n < 10 ? '0' + n : n; }
-    function setTanggalWaktu() {
-      var now = new Date();
-      var tahun = now.getFullYear();
-      var bulan = pad(now.getMonth() + 1);
-      var tanggal = pad(now.getDate());
-      var jam = pad(now.getHours());
-      var menit = pad(now.getMinutes());
-      var detik = pad(now.getSeconds());
-      var tanggalTampil = tanggal + '/' + bulan + '/' + tahun;
-      var waktuStr = jam + ':' + menit + ':' + detik;
-      document.getElementById('input-tanggal').value = tanggalTampil;
-      document.getElementById('input-waktu').value = waktuStr;
-    }
-    function hitungTotal() {
-      var hargaKopi = 15000;
-      var hargaLatte = 20000;
-      var hargaRoti = 10000;
-      var total = 0;
-      var kopiChecked = document.querySelector('input[name="produk[]"][value="Kopi Hitam"]').checked;
-      var latteChecked = document.querySelector('input[name="produk[]"][value="Café Latte"]').checked;
-      var rotiChecked = document.querySelector('input[name="produk[]"][value="Roti Bakar"]').checked;
-      var jumlahKopi = parseInt(document.getElementsByName('jumlah_kopi')[0].value) || 0;
-      var jumlahLatte = parseInt(document.getElementsByName('jumlah_latte')[0].value) || 0;
-      var jumlahRoti = parseInt(document.getElementsByName('jumlah_roti')[0].value) || 0;
-      if (kopiChecked) total += hargaKopi * jumlahKopi;
-      if (latteChecked) total += hargaLatte * jumlahLatte;
-      if (rotiChecked) total += hargaRoti * jumlahRoti;
-      document.getElementById('input-total').value = total.toLocaleString('id-ID');
-    }
-    // Set tanggal, waktu, dan total saat halaman dimuat
-    setTanggalWaktu();
-    hitungTotal();
-    // Update tanggal & waktu setiap detik
-    setInterval(setTanggalWaktu, 1000);
-    // Event listener untuk update total
-    var produkInputs = document.querySelectorAll('input[name="produk[]"], input[name="jumlah_kopi"], input[name="jumlah_latte"], input[name="jumlah_roti"]');
-    produkInputs.forEach(function(input) {
-      input.addEventListener('change', hitungTotal);
-      input.addEventListener('input', hitungTotal);
-    });
-  </script>
+    <!-- FOOTER -->
+    <div class="transaction-footer">
+      <p>&copy; 2025 Café Cerita Saja - Transaksi Aman & Terpercaya</p>
+    </div>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Café Cerita Saja</p>
-  </footer>
-  </font>
+  <!-- Load JavaScript -->
+  <script src="js/transaction.js"></script>
 </body>
 </html>

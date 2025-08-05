@@ -1,0 +1,185 @@
+/* =================================
+   CSS KHUSUS HALAMAN PRODUK
+   ================================= */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 1px solid #E0E0E0;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-card h3 {
+    color: #8B4513;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F0E68C;
+}
+
+.product-image {
+    margin: 15px 0;
+}
+
+.product-image img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-image img:hover {
+    transform: scale(1.05);
+}
+
+.product-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #8B4513;
+    margin: 10px 0;
+    background: #FFFAF0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.product-description {
+    color: #666;
+    line-height: 1.6;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.product-description b {
+    color: #8B4513;
+}
+
+.product-taste {
+    background: #F0E68C;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-style: italic;
+    color: #555;
+}
+
+.buy-button {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.buy-button:hover {
+    background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.product-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #8B4513 50%, transparent 100%);
+    margin: 30px 0;
+    border: none;
+}
+
+/* Discount Badge */
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #FF6B6B;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.product-card {
+    position: relative;
+}
+
+/* Special styling untuk layout legacy table */
+.legacy-product-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.legacy-product-section h3 {
+    color: #8B4513;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #F0E68C;
+}
+
+.legacy-product-section img {
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    margin: 15px 0;
+}
+
+.legacy-product-section img:hover {
+    transform: scale(1.05);
+}
+
+.legacy-product-section p {
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+.legacy-product-section p b {
+    color: #8B4513;
+}
+
+.legacy-product-section a {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.legacy-product-section a:hover {
+    background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,48 @@
+/* =================================
+   STYLES.CSS - Import Semua CSS
+   ================================= */
+
+/* Import CSS Global */
+@import url('css/global.css');
+
+/* Import CSS untuk halaman khusus */
+@import url('css/product.css');
+@import url('css/transaction.css');
+@import url('css/invoice.css');
+@import url('css/about.css');
+
+/* CSS tambahan yang spesifik untuk compatibility */
+.legacy-support {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* Override untuk backward compatibility */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+/* Print specific styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-only {
+        display: block !important;
+    }
+    
+    body {
+        background: white !important;
+    }
+    
+    .invoice-container {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+    }
+}

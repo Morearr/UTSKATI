@@ -2,113 +2,130 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu - Café Cerita Saja</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
-  <font face="Arial, Helvetica, sans-serif" size="4">
-  <table width="100%">
-    <!-- HEADER -->
-    <tr>
-      <td colspan="3">
-        <center>
+  <div class="container">
+    <table class="main-table">
+      <!-- HEADER -->
+      <tr>
+        <td colspan="3" class="header">
           <h1>Menu Café Cerita Saja</h1>
           <marquee>Nikmati menu spesial kami hari ini!</marquee>
-        </center>
-      </td>
-    </tr>
+        </td>
+      </tr>
 
-    <!-- MENU -->
-    <tr>
-      <td colspan="3" align="center">
-        <b>
-          <a href="index.html">Beranda</a> |
-          <a href="produk.html">Menu</a> |
-          <a href="transaksi.html">Transaksi</a> |
+      <!-- NAVIGATION -->
+      <tr>
+        <td colspan="3" class="navigation">
+          <a href="index.html">Beranda</a>
+          <a href="produk.html" class="active">Menu</a>
+          <a href="transaksi.html">Transaksi</a>
           <a href="tentang.html">Tentang Kami</a>
-        </b>
-      </td>
-    </tr>
+        </td>
+      </tr>
 
-    <!-- BODY -->
-    <tr height="400">
-      <td width="20%" align="center" valign="top">
-        <b>Diskon Kopi</b>
-        <hr width="80%">
-        <table border="0" width="90%">
-          <tr>
-            <td align="center">
-              <img src="images/kopi-hitam.jpg" alt="Promo Kopi" width="80"><br>
-              <small>Kopi Hitam 15% OFF</small>
-            </td>
-          </tr>
-          <tr>
-            <td align="center">
-              <img src="images/latte.jpg" alt="Promo Latte" width="80"><br>
-              <small>Café Latte Gratis Topping</small>
-            </td>
-          </tr>
-        </table>
-        <hr width="80%">
-        <ul style="list-style-type: square;">
-          <li>Voucher Minuman</li>
-          <li>Member Card</li>
-        </ul>
-      </td>
-      <td width="60%" align="center">
-        <h2>Daftar Menu</h2>
+      <!-- MAIN CONTENT -->
+      <tr>
+        <td class="main-content" colspan="3">
+          <div class="main-content">
+            <!-- SIDEBAR LEFT -->
+            <div class="sidebar-left">
+              <div class="sidebar-section">
+                <h3>Diskon Kopi</h3>
+                <div class="promo-item">
+                  <img src="images/kopi-hitam.jpg" alt="Promo Kopi">
+                  <small>Kopi Hitam 15% OFF</small>
+                </div>
+                <div class="promo-item">
+                  <img src="images/latte.jpg" alt="Promo Latte">
+                  <small>Café Latte Gratis Topping</small>
+                </div>
+              </div>
+              
+              <div class="sidebar-section">
+                <h3>Benefit</h3>
+                <ul class="sidebar-list">
+                  <li><b>Voucher Minuman</b><br>Untuk pembelian berikutnya</li>
+                  <li><b>Member Card</b><br>Dapatkan poin reward</li>
+                </ul>
+              </div>
+            </div>
 
-        <h3>Kopi Hitam</h3>
-        <img src="images/kopi-hitam.jpg" width="200"><br>
-        <p><b>Harga:</b> Rp 15.000</p>
-        <p><b>Deskripsi:</b> Kopi hitam klasik dengan aroma kuat dan rasa pahit yang khas, cocok untuk penikmat kopi sejati.</p>
-        <p><b>Rasa:</b> Pahit, strong, aftertaste sedikit asam.</p>
-        <a href="transaksi.html">Beli</a>
+            <!-- CONTENT CENTER -->
+            <div class="content-center">
+              <h2 class="text-center mb-20" style="color: #8B4513;">Daftar Menu Spesial</h2>
 
-        <hr>
+              <div class="legacy-product-section">
+                <h3>☕ Kopi Hitam</h3>
+                <img src="images/kopi-hitam.jpg" width="200" alt="Kopi Hitam">
+                <div class="product-price">Rp 15.000</div>
+                <div class="product-description">
+                  <p><b>Deskripsi:</b> Kopi hitam klasik dengan aroma kuat dan rasa pahit yang khas, cocok untuk penikmat kopi sejati yang menginginkan cita rasa autentik.</p>
+                  <div class="product-taste"><b>Karakteristik Rasa:</b> Pahit, strong, aftertaste sedikit asam dengan aroma yang menggugah selera.</div>
+                </div>
+                <a href="transaksi.html" class="buy-button">🛒 Pesan Sekarang</a>
+              </div>
 
-        <h3>Café Latte</h3>
-        <img src="images/latte.jpg" width="200"><br>
-        <p><b>Harga:</b> Rp 20.000</p>
-        <p><b>Deskripsi:</b> Perpaduan espresso dan susu segar, menghasilkan rasa creamy dan lembut yang nikmat di setiap tegukan.</p>
-        <p><b>Rasa:</b> Lembut, creamy, sedikit manis alami dari susu.</p>
-        <a href="transaksi.html">Beli</a>
+              <hr class="product-divider">
 
-        <hr>
+              <div class="legacy-product-section">
+                <h3>🥛 Café Latte</h3>
+                <img src="images/latte.jpg" width="200" alt="Café Latte">
+                <div class="product-price">Rp 20.000</div>
+                <div class="product-description">
+                  <p><b>Deskripsi:</b> Perpaduan sempurna espresso premium dan susu segar, menghasilkan rasa creamy dan lembut yang nikmat di setiap tegukan.</p>
+                  <div class="product-taste"><b>Karakteristik Rasa:</b> Lembut, creamy, sedikit manis alami dari susu dengan foam yang sempurna.</div>
+                </div>
+                <a href="transaksi.html" class="buy-button">🛒 Pesan Sekarang</a>
+              </div>
 
-        <h3>Roti Bakar</h3>
-        <img src="images/rotibakar.jpg" width="200"><br>
-        <p><b>Harga:</b> Rp 10.000</p>
-        <p><b>Deskripsi:</b> Roti bakar hangat dengan isian selai coklat atau keju, cocok untuk teman minum kopi atau teh.</p>
-        <p><b>Rasa:</b> Manis, gurih, tekstur renyah di luar dan lembut di dalam.</p>
-        <a href="transaksi.html">Beli</a>
-      </td>
-      <td width="20%" align="center" valign="top">
-        <b>Menu Baru</b>
-        <hr width="80%">
-        <ul style="padding-left: 10px;">
-          <li><b>Roti Bakar Coklat</b><br><small>Lezat & renyah</small></li>
-        </ul>
-        <hr width="80%">
-        <table border="0" width="90%">
-          <tr>
-            <td align="center">
-              <img src="images/rotibakar.jpg" alt="Menu Baru" width="80"><br>
-              <small>Cek Menu Spesial!</small>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
+              <hr class="product-divider">
 
-    <!-- FOOTER -->
-    <tr>
-      <td colspan="3" align="center">
-        <hr>
-        &copy; 2025 Café Cerita Saja
-      </td>
-    </tr>
-  </table>
-  </font>
+              <div class="legacy-product-section">
+                <h3>🍞 Roti Bakar</h3>
+                <img src="images/rotibakar.jpg" width="200" alt="Roti Bakar">
+                <div class="product-price">Rp 10.000</div>
+                <div class="product-description">
+                  <p><b>Deskripsi:</b> Roti bakar hangat dengan pilihan isian selai coklat atau keju premium, cocok sebagai teman minum kopi atau teh di sore hari.</p>
+                  <div class="product-taste"><b>Karakteristik Rasa:</b> Manis, gurih, tekstur renyah di luar dan lembut di dalam dengan isian yang melimpah.</div>
+                </div>
+                <a href="transaksi.html" class="buy-button">🛒 Pesan Sekarang</a>
+              </div>
+            </div>
+
+            <!-- SIDEBAR RIGHT -->
+            <div class="sidebar-right">
+              <div class="sidebar-section">
+                <h3>Menu Baru</h3>
+                <ul class="sidebar-list">
+                  <li><b>Roti Bakar Coklat Premium</b><br><small>Dengan topping coklat Belgian</small></li>
+                  <li><b>Cold Brew Coffee</b><br><small>Kopi dingin dengan es batu</small></li>
+                </ul>
+              </div>
+              
+              <div class="sidebar-section">
+                <h3>Rekomendasi</h3>
+                <div class="promo-item">
+                  <img src="images/rotibakar.jpg" alt="Menu Spesial">
+                  <small>Combo Hemat: Kopi + Roti</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- FOOTER -->
+      <tr>
+        <td colspan="3" class="footer">
+          &copy; 2025 Café Cerita Saja - Menu Terbaik untuk Pengalaman Terbaik
+        </td>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>

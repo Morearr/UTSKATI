@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Café Cerita Saja - Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f3f0 0%, #e8e2db 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .nav-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .logo {
+            font-size: 3em;
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .nav-card {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .nav-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .nav-card p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .info-section {
+            background: #FFFAF0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border: 2px solid #F0E68C;
+        }
+        
+        .info-section h4 {
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .tech-badge {
+            background: #8B4513;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 20px;
+            }
+            
+            .logo {
+                font-size: 2.5em;
+            }
+            
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <div class="logo">☕ Café Cerita Saja</div>
+        <p class="tagline">Website Café Modern dengan Sistem Transaksi Terintegrasi</p>
+        
+        <div class="nav-grid">
+            <a href="index.html" class="nav-card">
+                <h3>🏠 Beranda</h3>
+                <p>Halaman utama dengan informasi café, promo, dan welcome section</p>
+            </a>
+            
+            <a href="produk.html" class="nav-card">
+                <h3>📋 Menu Produk</h3>
+                <p>Katalog lengkap menu café dengan gambar dan deskripsi detail</p>
+            </a>
+            
+            <a href="transaksi.html" class="nav-card">
+                <h3>💳 Form Transaksi</h3>
+                <p>Form pemesanan dengan validasi dan kalkulasi otomatis</p>
+            </a>
+            
+            <a href="tentang.html" class="nav-card">
+                <h3>ℹ️ Tentang Kami</h3>
+                <p>Profil café, visi misi, kontak, dan informasi pemilik</p>
+            </a>
+        </div>
+        
+        <div class="info-section">
+            <h4>🎯 Fitur Utama Website:</h4>
+            <ul style="text-align: left; color: #666; line-height: 1.8; padding-left: 20px;">
+                <li>✅ Responsive Design - Mobile Friendly</li>
+                <li>✅ Form Transaksi dengan Validasi JavaScript</li>
+                <li>✅ Auto-Calculate Total Pembayaran</li>
+                <li>✅ Generate Struk/Invoice Otomatis</li>
+                <li>✅ CSS Modular dan Terorganisir</li>
+                <li>✅ Print-Friendly Invoice Design</li>
+                <li>✅ Real-time Date & Time Update</li>
+                <li>✅ Local Storage untuk Riwayat Transaksi</li>
+            </ul>
+            
+            <div class="tech-stack">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript ES6</span>
+                <span class="tech-badge">Responsive Design</span>
+                <span class="tech-badge">Print CSS</span>
+                <span class="tech-badge">Local Storage</span>
+            </div>
+        </div>
+        
+        <div style="margin-top: 20px; color: #888; font-size: 0.9em;">
+            <p>📚 <a href="README.md" style="color: #8B4513;">Lihat Dokumentasi Lengkap</a></p>
+            <p>&copy; 2025 Café Cerita Saja - UTS Web Programming</p>
+        </div>
+    </div>
+</body>
+</html>

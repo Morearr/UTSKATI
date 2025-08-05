@@ -1,0 +1,355 @@
+/* =================================
+   CSS Global untuk Café Cerita Saja
+   ================================= */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f3f0 0%, #e8e2db 100%);
+    min-height: 100vh;
+}
+
+/* =================================
+   LAYOUT COMPONENTS
+   ================================= */
+
+/* Container untuk layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-table {
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+/* =================================
+   HEADER STYLES
+   ================================= */
+
+.header {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="60" cy="70" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+    pointer-events: none;
+}
+
+.header h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.header marquee {
+    font-size: 1.1em;
+    color: #FFE4B5;
+    background: rgba(0,0,0,0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* =================================
+   NAVIGATION STYLES
+   ================================= */
+
+.navigation {
+    background: #654321;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 3px solid #8B4513;
+}
+
+.navigation a {
+    color: #FFE4B5;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: #8B4513;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* =================================
+   MAIN CONTENT LAYOUT
+   ================================= */
+
+.main-content {
+    display: flex;
+    min-height: 400px;
+    background: white;
+}
+
+.sidebar-left,
+.sidebar-right {
+    width: 20%;
+    background: linear-gradient(180deg, #F5F5DC 0%, #F0E68C 100%);
+    padding: 20px 15px;
+    border-right: 2px solid #DDD;
+}
+
+.sidebar-right {
+    border-right: none;
+    border-left: 2px solid #DDD;
+}
+
+.content-center {
+    width: 60%;
+    padding: 30px 25px;
+    background: white;
+}
+
+/* =================================
+   SIDEBAR STYLES
+   ================================= */
+
+.sidebar-section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #E0E0E0;
+}
+
+.sidebar-section h3 {
+    color: #8B4513;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #F0E68C;
+    text-align: center;
+}
+
+.promo-item {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #FFFAF0;
+    border-radius: 8px;
+    border: 1px solid #F0E68C;
+}
+
+.promo-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #DDD;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.promo-item img:hover {
+    transform: scale(1.1);
+}
+
+.promo-item small {
+    display: block;
+    color: #666;
+    font-weight: bold;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-list li {
+    background: #FFFAF0;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #8B4513;
+    font-size: 0.9em;
+}
+
+.sidebar-list li b {
+    color: #8B4513;
+}
+
+/* =================================
+   CONTENT CENTER STYLES
+   ================================= */
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome-section h2 {
+    color: #8B4513;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.welcome-section p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.main-image {
+    margin: 20px 0;
+}
+
+.main-image img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.main-image img:hover {
+    transform: scale(1.05);
+}
+
+.main-image a {
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.reservation-section {
+    background: linear-gradient(135deg, #F0E68C 0%, #FFE4B5 100%);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #DDD;
+}
+
+.reservation-section h3 {
+    color: #8B4513;
+    margin-bottom: 10px;
+}
+
+.reservation-section a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.reservation-section a:hover {
+    background: #8B4513;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* =================================
+   FOOTER STYLES
+   ================================= */
+
+.footer {
+    background: #654321;
+    color: #FFE4B5;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    border-top: 3px solid #8B4513;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+   ================================= */
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .sidebar-left,
+    .sidebar-right,
+    .content-center {
+        width: 100%;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .navigation a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .main-table {
+        margin: 10px;
+        border-radius: 10px;
+    }
+}
+
+/* =================================
+   UTILITY CLASSES
+   ================================= */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mt-20 { margin-top: 20px; }
+
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+
+.divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #DDD 50%, transparent 100%);
+    margin: 20px 0;
+    border: none;
+}

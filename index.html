@@ -2,101 +2,111 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beranda - Café Cerita Saja</title>
+  <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
 
-  <table width="100%">
-    <!-- HEADER -->
-    <tr>
-      <td colspan="3">
-        <center>
+  <div class="container">
+    <table class="main-table">
+      <!-- HEADER -->
+      <tr>
+        <td colspan="3" class="header">
           <h1>Café Cerita Saja</h1>
           <marquee>Selamat datang di Café Cerita Saja - Tempat terbaik untuk bersantai!</marquee>
-        </center>
-      </td>
-    </tr>
+        </td>
+      </tr>
 
-    <!-- MENU -->
-    <tr>
-      <td colspan="3" align="center">
-        <b>
-          <a href="index.html">Beranda</a> |
-          <a href="produk.html">Menu</a> |
-          <a href="transaksi.html">Transaksi</a> |
+      <!-- NAVIGATION -->
+      <tr>
+        <td colspan="3" class="navigation">
+          <a href="index.html" class="active">Beranda</a>
+          <a href="produk.html">Menu</a>
+          <a href="transaksi.html">Transaksi</a>
           <a href="tentang.html">Tentang Kami</a>
-        </b>
-      </td>
-    </tr>
+        </td>
+      </tr>
 
-    <!-- BODY -->
-    <tr height="400">
-      <td width="20%" align="center" valign="top">
-        <b>Promo Hari Ini</b>
-        <hr width="80%">
-        <table border="0" width="90%">
-          <tr>
-            <td align="center">
-              <img src="images/latte.jpg" alt="Promo 1" width="80"><br>
-              <small>Kopi Susu Diskon 20%</small>
-            </td>
-          </tr>
-          <tr>
-            <td align="center">
-              <img src="images/rotibakar.jpg" alt="Promo 2" width="80"><br>
-              <small>Beli 2 Gratis 1 Roti Bakar</small>
-            </td>
-          </tr>
-        </table>
-        <hr width="80%">
-        <ul style="list-style-type: square;">
-          <li>Member Card</li>
-          <li>Voucher Spesial</li>
-        </ul>
-      </td>
-      <td width="60%" align="center">
-        <h2>Selamat Datang</h2>
-        <p>Café Cerita Saja menyajikan kopi terbaik dan suasana yang tenang untuk menemani harimu.</p>
-        <br>
-        <a href="produk.html">
-          <img src="images/ceritasaja.jpg" alt="Promo Kopi" width="250"><br>
-          <b>Lihat Menu</b>
-        </a>
-        <hr width="60%">
-        <h3>Reservasi Mudah</h3>
-        <p>
-          Ingin pesan tempat atau menu favorit? <br>
-          <a href="transaksi.html"><b>Klik di sini untuk reservasi!</b></a>
-        </p>
-      </td>
-      <td width="20%" align="center" valign="top">
-        <b>Berita & Event</b>
-        <hr width="80%">
-        <ul style="padding-left: 10px;">
-          <li><b>Live Music</b><br><small>Setiap Jumat, 19.00 WIB</small></li>
-          <li><b>Workshop Latte Art</b><br><small>Sabtu, 15 Juni</small></li>
-          <li><b>Diskon Pelajar</b><br><small>Setiap Hari Senin</small></li>
-        </ul>
-        <hr width="80%">
-        <table border="0" width="90%">
-          <tr>
-            <td align="center">
-              <img src="images/nobar.jpg" alt="Event 1" width="80"><br>
-              <small>Event Spesial</small>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
+      <!-- MAIN CONTENT -->
+      <tr>
+        <td class="main-content" colspan="3">
+          <div class="main-content">
+            <!-- SIDEBAR LEFT -->
+            <div class="sidebar-left">
+              <div class="sidebar-section">
+                <h3>Promo Hari Ini</h3>
+                <div class="promo-item">
+                  <img src="images/latte.jpg" alt="Promo 1">
+                  <small>Kopi Susu Diskon 20%</small>
+                </div>
+                <div class="promo-item">
+                  <img src="images/rotibakar.jpg" alt="Promo 2">
+                  <small>Beli 2 Gratis 1 Roti Bakar</small>
+                </div>
+              </div>
+              
+              <div class="sidebar-section">
+                <h3>Keuntungan Member</h3>
+                <ul class="sidebar-list">
+                  <li><b>Member Card</b><br>Dapatkan poin setiap pembelian</li>
+                  <li><b>Voucher Spesial</b><br>Diskon khusus member</li>
+                </ul>
+              </div>
+            </div>
 
-    <!-- FOOTER -->
-    <tr>
-      <td colspan="3" align="center">
-        <hr>
-        &copy; 2025 Café Cerita Saja
-      </td>
-    </tr>
-  </table>
+            <!-- CONTENT CENTER -->
+            <div class="content-center">
+              <div class="welcome-section">
+                <h2>Selamat Datang</h2>
+                <p>Café Cerita Saja menyajikan kopi terbaik dan suasana yang tenang untuk menemani harimu. Nikmati pengalaman minum kopi yang tak terlupakan di tempat kami.</p>
+                
+                <div class="main-image">
+                  <a href="produk.html">
+                    <img src="images/ceritasaja.jpg" alt="Café Cerita Saja">
+                    <br><strong>Lihat Menu Lengkap</strong>
+                  </a>
+                </div>
+                
+                <div class="reservation-section">
+                  <h3>Reservasi Mudah</h3>
+                  <p>Ingin pesan tempat atau menu favorit?</p>
+                  <a href="transaksi.html">Reservasi Sekarang!</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SIDEBAR RIGHT -->
+            <div class="sidebar-right">
+              <div class="sidebar-section">
+                <h3>Berita & Event</h3>
+                <ul class="sidebar-list">
+                  <li><b>Live Music</b><br><small>Setiap Jumat, 19.00 WIB</small></li>
+                  <li><b>Workshop Latte Art</b><br><small>Sabtu, 15 Juni</small></li>
+                  <li><b>Diskon Pelajar</b><br><small>Setiap Hari Senin</small></li>
+                </ul>
+              </div>
+              
+              <div class="sidebar-section">
+                <h3>Event Spesial</h3>
+                <div class="promo-item">
+                  <img src="images/nobar.jpg" alt="Event Spesial">
+                  <small>Nonton Bareng Weekend</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- FOOTER -->
+      <tr>
+        <td colspan="3" class="footer">
+          &copy; 2025 Café Cerita Saja - Kopi Terbaik untuk Cerita Terbaik
+        </td>
+      </tr>
+    </table>
+  </div>
 
 </body>
 </html>

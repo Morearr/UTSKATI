@@ -1,0 +1,302 @@
+/* =================================
+   CSS KHUSUS HALAMAN STRUK/INVOICE
+   ================================= */
+
+.invoice-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+}
+
+.invoice-header {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.invoice-header::before {
+    content: '☕';
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-size: 2em;
+    opacity: 0.7;
+}
+
+.invoice-header::after {
+    content: '☕';
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 2em;
+    opacity: 0.7;
+}
+
+.invoice-header h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.cafe-info {
+    background: #FFFAF0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px dashed #8B4513;
+}
+
+.cafe-info h3 {
+    color: #8B4513;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cafe-info p {
+    color: #666;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.invoice-content {
+    padding: 30px;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #FFFAF0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.invoice-table tr:nth-child(even) {
+    background: rgba(240, 230, 140, 0.2);
+}
+
+.invoice-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #E0E0E0;
+    vertical-align: top;
+}
+
+.invoice-table td:first-child {
+    font-weight: bold;
+    color: #8B4513;
+    width: 150px;
+}
+
+.invoice-table td:nth-child(2) {
+    width: 20px;
+    text-align: center;
+    color: #8B4513;
+}
+
+.invoice-table td:last-child {
+    color: #333;
+}
+
+/* Styling khusus untuk data transaksi */
+.transaction-id {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-list {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #F0E68C;
+    margin: 10px 0;
+}
+
+.product-item-invoice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #DDD;
+}
+
+.product-item-invoice:last-child {
+    border-bottom: none;
+}
+
+.product-name {
+    font-weight: bold;
+    color: #8B4513;
+}
+
+.product-quantity {
+    background: #F0E68C;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #A0522D;
+}
+
+/* Total section */
+.total-section {
+    background: linear-gradient(135deg, #F0E68C 0%, #FFE4B5 100%);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 2px solid #8B4513;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.total-final {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #8B4513;
+    border-top: 2px solid #8B4513;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+/* Payment info */
+.payment-info {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #E0E0E0;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.payment-method {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #8B4513;
+    background: #FFFAF0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Footer invoice */
+.invoice-footer {
+    background: #654321;
+    color: #FFE4B5;
+    padding: 20px;
+    text-align: center;
+}
+
+.thank-you {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-note {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* Print button */
+.print-button {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.print-button:hover {
+    background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* QR Code styling (jika ada) */
+.qr-section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    border: 2px dashed #8B4513;
+}
+
+.qr-code {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    background: #f0f0f0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .invoice-container {
+        margin: 10px;
+        font-size: 0.9em;
+    }
+    
+    .invoice-content {
+        padding: 20px;
+    }
+    
+    .invoice-table td:first-child {
+        width: 120px;
+    }
+    
+    .total-row {
+        font-size: 1em;
+    }
+    
+    .total-final {
+        font-size: 1.2em;
+    }
+}
+
+/* Print styles */
+@media print {
+    .print-button {
+        display: none;
+    }
+    
+    .invoice-container {
+        box-shadow: none;
+        margin: 0;
+    }
+    
+    body {
+        background: white;
+    }
+}

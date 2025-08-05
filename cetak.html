@@ -2,52 +2,242 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Struk Transaksi Café Cerita Saja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Struk Transaksi - Café Cerita Saja</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/invoice.css">
 </head>
 <body>
-  <center>
-    <h2>Struk Transaksi Café Cerita Saja</h2>
-    <table cellpadding="4">
-      <tr>
-        <td>Nama</td>
-        <td>:</td>
-        <td>
-          <script>
-            document.write(decodeURIComponent((location.search.match(/[\?&]nama=([^&]*)/)||[])[1]||''));
-          </script>
-        </td>
-      </tr>
-      <tr>
-        <td>Produk</td>
-        <td>:</td>
-        <td>
+  <div class="invoice-container">
+    <!-- HEADER -->
+    <div class="invoice-header">
+      <h2>🧾 STRUK TRANSAKSI</h2>
+    </div>
+    
+    <!-- INFO CAFÉ -->
+    <div class="cafe-info">
+      <h3>☕ CAFÉ CERITA SAJA</h3>
+      <p>Jl. Kopi Nikmat No. 123, Jakarta</p>
+      <p>📞 0812-xxxx-xxxx | 📧 cafe@ceritasaja.com</p>
+      <p>🌐 @ceritasaja</p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="invoice-content">
+      <!-- TRANSACTION ID -->
+      <div style="text-align: center; margin-bottom: 20px;">
+        <div class="transaction-id">
+          ID: <span id="transaction-id">CS20250805001</span>
+        </div>
+      </div>
+
+      <!-- CUSTOMER INFO -->
+      <table class="invoice-table">
+        <tr>
+          <td>👤 Nama</td>
+          <td>:</td>
+          <td id="invoice-nama">
+            <script>
+              document.write(decodeURIComponent((location.search.match(/[\?&]nama=([^&]*)/)||[])[1]||'Nama tidak tersedia'));
+            </script>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>📅 Tanggal</td>
+          <td>:</td>
+          <td id="invoice-tanggal">
+            <script>
+              document.write(decodeURIComponent((location.search.match(/[\?&]tanggal=([^&]*)/)||[])[1]||''));
+            </script>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>⏰ Waktu</td>
+          <td>:</td>
+          <td id="invoice-waktu">
+            <script>
+              document.write(decodeURIComponent((location.search.match(/[\?&]waktu=([^&]*)/)||[])[1]||''));
+            </script>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>🪑 Meja</td>
+          <td>:</td>
+          <td id="invoice-meja">
+            <script>
+              const meja = decodeURIComponent((location.search.match(/[\?&]meja=([^&]*)/)||[])[1]||'');
+              document.write(meja ? `Meja ${meja}` : 'Tidak dipilih');
+            </script>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>👥 Jumlah Orang</td>
+          <td>:</td>
+          <td id="invoice-jumlah-orang">
+            <script>
+              document.write(decodeURIComponent((location.search.match(/[\?&]jumlah_orang=([^&]*)/)||[])[1]||'1'));
+            </script>
+          </td>
+        </tr>
+      </table>
+
+      <!-- PRODUCT LIST -->
+      <div class="product-list">
+        <h4 style="color: #8B4513; margin-bottom: 15px; text-align: center;">🛍️ PESANAN</h4>
+        <div id="invoice-products">
           <script>
             var params = new URLSearchParams(window.location.search);
             var produk = params.getAll('produk[]');
             var hasil = [];
+            var total = 0;
+            
+            var harga = {
+              'Kopi Hitam': 15000,
+              'Café Latte': 20000,
+              'Roti Bakar': 10000
+            };
+            
             if(produk.length) {
-              if(params.get('jumlah_kopi')) hasil.push('Kopi Hitam (' + params.get('jumlah_kopi') + ')');
-              if(params.get('jumlah_latte')) hasil.push('Café Latte (' + params.get('jumlah_latte') + ')');
-              if(params.get('jumlah_roti')) hasil.push('Roti Bakar (' + params.get('jumlah_roti') + ')');
-              document.write(hasil.join(', '));
+              produk.forEach(function(item) {
+                var jumlah = 0;
+                var hargaItem = harga[item] || 0;
+                
+                switch(item) {
+                  case 'Kopi Hitam':
+                    jumlah = parseInt(params.get('jumlah_kopi')) || 0;
+                    break;
+                  case 'Café Latte':
+                    jumlah = parseInt(params.get('jumlah_latte')) || 0;
+                    break;
+                  case 'Roti Bakar':
+                    jumlah = parseInt(params.get('jumlah_roti')) || 0;
+                    break;
+                }
+                
+                if(jumlah > 0) {
+                  var subtotal = hargaItem * jumlah;
+                  total += subtotal;
+                  
+                  document.write(`
+                    <div class="product-item-invoice">
+                      <div>
+                        <span class="product-name">${item}</span>
+                        <span class="product-quantity">x${jumlah}</span>
+                      </div>
+                      <div class="product-price">Rp ${subtotal.toLocaleString('id-ID')}</div>
+                    </div>
+                  `);
+                }
+              });
+            } else {
+              document.write('<div style="text-align: center; color: #666;">Tidak ada produk yang dipilih</div>');
             }
           </script>
-        </td>
-      </tr>
-      <tr>
-        <td>Metode Pembayaran</td>
-        <td>:</td>
-        <td>
-          <script>
-            document.write(decodeURIComponent((location.search.match(/[\?&]pembayaran=([^&]*)/)||[])[1]||''));
+        </div>
+      </div>
+
+      <!-- PAYMENT INFO -->
+      <div class="payment-info">
+        <div class="payment-method" id="invoice-pembayaran">
+          💳 <script>
+            document.write(decodeURIComponent((location.search.match(/[\?&]pembayaran=([^&]*)/)||[])[1]||'Tidak dipilih'));
           </script>
-        </td>
-      </tr>
-      <tr>
-        <td>Tanggal</td>
-        <td>:</td>
-        <td>
-          <script>
+        </div>
+      </div>
+
+      <!-- TOTAL SECTION -->
+      <div class="total-section">
+        <div class="total-row">
+          <span>Subtotal:</span>
+          <span id="calculated-total">Rp 0</span>
+        </div>
+        <div class="total-row">
+          <span>Pajak (10%):</span>
+          <span id="tax-amount">Rp 0</span>
+        </div>
+        <div class="total-row total-final">
+          <span>TOTAL BAYAR:</span>
+          <span id="invoice-total">
+            <script>
+              document.write(decodeURIComponent((location.search.match(/[\?&]total=([^&]*)/)||[])[1]||'Rp 0'));
+            </script>
+          </span>
+        </div>
+      </div>
+
+      <!-- NOTES -->
+      <table class="invoice-table" style="margin-top: 20px;">
+        <tr>
+          <td>📝 Catatan</td>
+          <td>:</td>
+          <td id="invoice-catatan">
+            <script>
+              const catatanValue = decodeURIComponent((location.search.match(/[\?&]catatan=([^&]*)/)||[])[1]||'');
+              document.write(catatanValue || 'Tidak ada catatan khusus');
+            </script>
+          </td>
+        </tr>
+      </table>
+
+      <!-- QR CODE SECTION -->
+      <div class="qr-section">
+        <h4>📱 Scan untuk Review</h4>
+        <div class="qr-code">
+          [QR CODE]
+        </div>
+        <small>Berikan review untuk pelayanan kami</small>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="invoice-footer">
+      <div class="thank-you">🙏 Terima Kasih Atas Kunjungan Anda!</div>
+      <div class="footer-note">
+        Simpan struk ini sebagai bukti pembayaran<br>
+        Selamat menikmati dan sampai jumpa lagi! ☕
+      </div>
+    </div>
+  </div>
+
+  <!-- PRINT BUTTON -->
+  <div style="text-align: center; margin: 20px;">
+    <button id="print-button" class="print-button" onclick="window.print()">
+      🖨️ Cetak Struk
+    </button>
+    <button class="print-button" onclick="window.location.href='transaksi.html'" style="background: #6c757d;">
+      🔙 Transaksi Baru
+    </button>
+  </div>
+
+  <!-- Load JavaScript -->
+  <script src="js/invoice.js"></script>
+  
+  <script>
+    // Hitung pajak dan update total
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        const calculatedTotalElement = document.getElementById('calculated-total');
+        if (calculatedTotalElement) {
+          const subtotalText = calculatedTotalElement.textContent;
+          const subtotal = parseInt(subtotalText.replace(/[^\d]/g, '')) || 0;
+          const tax = Math.round(subtotal * 0.1);
+          const finalTotal = subtotal + tax;
+          
+          document.getElementById('tax-amount').textContent = `Rp ${tax.toLocaleString('id-ID')}`;
+          
+          // Update total jika perlu
+          const totalElement = document.getElementById('invoice-total');
+          if (totalElement.textContent === 'Rp 0' || !totalElement.textContent.includes('Rp')) {
+            totalElement.textContent = `Rp ${finalTotal.toLocaleString('id-ID')}`;
+          }
+        }
+      }, 500);
+    });
+  </script>
             document.write(decodeURIComponent((location.search.match(/[\?&]tanggal=([^&]*)/)||[])[1]||''));
           </script>
         </td>
