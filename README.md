@@ -1,9 +1,9 @@
-# 📚 DOKUMENTASI WEBSITE CAFÉ CERITA SAJA
+# DOKUMENTASI WEBSITE CAFÉ CERITA SAJA
 
-## 🎯 Overview
+## Overview
 Website Café Cerita Saja adalah aplikasi web untuk mengelola transaksi dan pemesanan café dengan fitur lengkap dan tampilan yang modern.
 
-## 📁 Struktur File
+## Struktur File
 
 ### HTML Files
 - `index.html` - Halaman beranda dengan informasi café dan promo
@@ -28,7 +28,7 @@ Website Café Cerita Saja adalah aplikasi web untuk mengelola transaksi dan peme
 ### Assets
 - `images/` - Folder berisi gambar produk dan foto
 
-## 🚀 Fitur Utama
+## Fitur Utama
 
 ### 1. Halaman Beranda (index.html)
 - Header dengan logo dan tagline café
@@ -42,7 +42,7 @@ Website Café Cerita Saja adalah aplikasi web untuk mengelola transaksi dan peme
 - Informasi detail produk (harga, deskripsi, rasa)
 - Tombol "Pesan Sekarang" yang terintegrasi
 - Sidebar dengan diskon dan menu baru
-- Responsive design
+-Responsive Design
 
 ### 3. Halaman Transaksi (transaksi.html)
 - Form transaksi yang lengkap dan tervalidasi
@@ -101,14 +101,14 @@ Website Café Cerita Saja adalah aplikasi web untuk mengelola transaksi dan peme
 - Print functionality
 - Transaction ID generator
 
-## 📱 Responsive Design
+## Responsive Design
 - Mobile-first approach
 - Flexible grid system
 - Touch-friendly buttons
 - Optimized images
 - Adaptive navigation
 
-## 🖨️ Print Optimization
+## Print Optimization
 - Print-specific CSS
 - Hidden elements for print
 - Optimized layout untuk struk
@@ -130,24 +130,24 @@ Website Café Cerita Saja adalah aplikasi web untuk mengelola transaksi dan peme
 3. JavaScript terpisah per functionality
 4. Dokumentasi lengkap tersedia
 
-## 🎯 Menu Produk
+## Menu Produk
 
-### ☕ Kopi Hitam - Rp 15.000
-- Kopi hitam klasik dengan aroma kuat
+### Kopi Hitam - Rp 15.000
+-Kopi Hitam klasik dengan aroma kuat
 - Rasa pahit dengan aftertaste asam
 - Cocok untuk penikmat kopi sejati
 
-### 🥛 Café Latte - Rp 20.000
+### Café Latte - Rp 20.000
 - Perpaduan espresso dan susu segar
 - Rasa creamy dan lembut
 - Foam yang sempurna
 
-### 🍞 Roti Bakar - Rp 10.000
-- Roti bakar dengan isian coklat/keju
+### Roti Bakar - Rp 10.000
+-Roti Bakar dengan isian coklat/keju
 - Tekstur renyah luar, lembut dalam
 - Cocok sebagai teman kopi
 
-## 🏪 Informasi Café
+## Informasi Café
 
 **Nama:** Café Cerita Saja
 **Pemilik:** Muhamad Arya Pratama
@@ -167,7 +167,7 @@ Website Café Cerita Saja adalah aplikasi web untuk mengelola transaksi dan peme
 - Edge 79+
 - Mobile browsers
 
-## 📊 Performance
+## Performance
 - Lightweight CSS (< 50KB total)
 - Optimized JavaScript
 - Compressed images
@@ -179,7 +179,7 @@ Website Café Cerita Saja adalah aplikasi web untuk mengelola transaksi dan peme
 - Gambar disimpan di folder `images/`
 - CSS dapat dikustomisasi per halaman
 
-## 🚀 Future Enhancements
+## Future Enhancements
 - Database integration
 - Online payment gateway
 - Customer login system

@@ -172,7 +172,7 @@ class InvoiceManager {
             const printButton = document.createElement('button');
             printButton.id = 'print-button';
             printButton.className = 'print-button';
-            printButton.innerHTML = '🖨️ Cetak Struk';
+            printButton.innerHTML = 'Cetak Struk';
             printButton.onclick = () => this.printInvoice();
             
             // Tambahkan setelah container invoice

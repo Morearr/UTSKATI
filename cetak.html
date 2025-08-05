@@ -11,15 +11,15 @@
   <div class="invoice-container">
     <!-- HEADER -->
     <div class="invoice-header">
-      <h2>🧾 STRUK TRANSAKSI</h2>
+      <h2>STRUK TRANSAKSI</h2>
     </div>
     
     <!-- INFO CAFÉ -->
     <div class="cafe-info">
-      <h3>☕ CAFÉ CERITA SAJA</h3>
+      <h3>CAFÉ CERITA SAJA</h3>
       <p>Jl. Kopi Nikmat No. 123, Jakarta</p>
-      <p>📞 0812-xxxx-xxxx | 📧 cafe@ceritasaja.com</p>
-      <p>🌐 @ceritasaja</p>
+      <p>0812-xxxx-xxxx | cafe@ceritasaja.com</p>
+      <p>@ceritasaja</p>
     </div>
 
     <!-- CONTENT -->
@@ -34,7 +34,7 @@
       <!-- CUSTOMER INFO -->
       <table class="invoice-table">
         <tr>
-          <td>👤 Nama</td>
+          <td>Nama</td>
           <td>:</td>
           <td id="invoice-nama">
             <script>
@@ -44,7 +44,7 @@
         </tr>
         
         <tr>
-          <td>📅 Tanggal</td>
+          <td>Tanggal</td>
           <td>:</td>
           <td id="invoice-tanggal">
             <script>
@@ -54,7 +54,7 @@
         </tr>
         
         <tr>
-          <td>⏰ Waktu</td>
+          <td>Waktu</td>
           <td>:</td>
           <td id="invoice-waktu">
             <script>
@@ -64,7 +64,7 @@
         </tr>
         
         <tr>
-          <td>🪑 Meja</td>
+          <td>Meja</td>
           <td>:</td>
           <td id="invoice-meja">
             <script>
@@ -75,7 +75,7 @@
         </tr>
         
         <tr>
-          <td>👥 Jumlah Orang</td>
+          <td>Jumlah Orang</td>
           <td>:</td>
           <td id="invoice-jumlah-orang">
             <script>
@@ -87,7 +87,7 @@
 
       <!-- PRODUCT LIST -->
       <div class="product-list">
-        <h4 style="color: #8B4513; margin-bottom: 15px; text-align: center;">🛍️ PESANAN</h4>
+        <h4 style="color: #9AA6B2; margin-bottom: 15px; text-align: center;">PESANAN</h4>
         <div id="invoice-products">
           <script>
             var params = new URLSearchParams(window.location.search);
@@ -143,7 +143,7 @@
       <!-- PAYMENT INFO -->
       <div class="payment-info">
         <div class="payment-method" id="invoice-pembayaran">
-          💳 <script>
+          <script>
             document.write(decodeURIComponent((location.search.match(/[\?&]pembayaran=([^&]*)/)||[])[1]||'Tidak dipilih'));
           </script>
         </div>
@@ -172,7 +172,7 @@
       <!-- NOTES -->
       <table class="invoice-table" style="margin-top: 20px;">
         <tr>
-          <td>📝 Catatan</td>
+          <td>Catatan</td>
           <td>:</td>
           <td id="invoice-catatan">
             <script>
@@ -185,7 +185,7 @@
 
       <!-- QR CODE SECTION -->
       <div class="qr-section">
-        <h4>📱 Scan untuk Review</h4>
+        <h4>Scan untuk Review</h4>
         <div class="qr-code">
           [QR CODE]
         </div>
@@ -195,10 +195,10 @@
 
     <!-- FOOTER -->
     <div class="invoice-footer">
-      <div class="thank-you">🙏 Terima Kasih Atas Kunjungan Anda!</div>
+      <div class="thank-you">Terima Kasih Atas Kunjungan Anda!</div>
       <div class="footer-note">
         Simpan struk ini sebagai bukti pembayaran<br>
-        Selamat menikmati dan sampai jumpa lagi! ☕
+        Selamat menikmati dan sampai jumpa lagi!
       </div>
     </div>
   </div>
@@ -206,10 +206,10 @@
   <!-- PRINT BUTTON -->
   <div style="text-align: center; margin: 20px;">
     <button id="print-button" class="print-button" onclick="window.print()">
-      🖨️ Cetak Struk
+      Cetak Struk
     </button>
     <button class="print-button" onclick="window.location.href='transaksi.html'" style="background: #6c757d;">
-      🔙 Transaksi Baru
+      Transaksi Baru
     </button>
   </div>
 

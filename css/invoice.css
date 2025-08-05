@@ -21,7 +21,7 @@
 }
 
 .invoice-header::before {
-    content: '☕';
+    content: '';
     position: absolute;
     top: 15px;
     left: 30px;
@@ -30,7 +30,7 @@
 }
 
 .invoice-header::after {
-    content: '☕';
+    content: '';
     position: absolute;
     top: 15px;
     right: 30px;
